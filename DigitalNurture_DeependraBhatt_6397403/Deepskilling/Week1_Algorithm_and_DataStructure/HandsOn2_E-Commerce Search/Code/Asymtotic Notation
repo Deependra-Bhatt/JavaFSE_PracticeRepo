@@ -1,0 +1,22 @@
+ASYMPTOTIC NOTATION
+
+What is Big O Notation?
+Big O Notation is a mathematical way to describe how an algorithm's runtime or space requirements grow as the input size increases.
+i)	It expresses the upper bound of an algorithm’s running time.
+ii)	Focuses on performance and scalability.
+
+Why It's Useful
+i)	Helps compare algorithms regardless of hardware.
+ii)	Lets developers choose the most efficient approach.
+
+ Search Case Scenarios
+
+Scenario	    Linear Search	    Binary Search
+Best Case	    	O(1)	                O(1)
+Average Case		O(n)	                O(log n)
+Worst Case	    	O(n)	                O(log n)
+
+
+NOTE: 
+	Linear Search is used for unsorted and small inputs.
+	Binary Search is used for sorted and large inputs.

@@ -1,0 +1,14 @@
+Recusrion: When a function is called within its own body, it is known as recursion.
+
+It is used in natural recursive cases like compounding, divide-conquer, etc.
+
+Syntax:
+
+        void functionName(parameters){
+            if(baseCase){
+                return ;
+            }
+
+            return functionName(updatedParameters); // recursive call
+        }
+
