@@ -1,0 +1,9 @@
+f735d9a5-30d2-43e6-8b37-7cdfe100ba1b:1750614718703:0:F:INSERT INTO Customers (CustomerID, Name, DOB, Balance, LastModified)\nVALUES (1, 'John Doe', TO_DATE('1985-05-15', 'YYYY-MM-DD'), 1000, SYSDATE);
+94066fca-7ec5-4176-a0ce-dc73535b2042:1750614719260:0:F:INSERT INTO Customers (CustomerID, Name, DOB, Balance, LastModified)\nVALUES (2, 'Jane Smith', TO_DATE('1990-07-20', 'YYYY-MM-DD'), 1500, SYSDATE);
+6176018b-b37a-4ee1-ab70-2fc3604217e7:1750614719520:0:F:INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)\nVALUES (1, 1, 'Savings', 1000, SYSDATE);
+ac893082-297d-41da-8b0f-6834753821ea:1750614719815:0:F:INSERT INTO Accounts (AccountID, CustomerID, AccountType, Balance, LastModified)\nVALUES (2, 2, 'Checking', 1500, SYSDATE);
+285d4b2f-c7f9-4d9e-8e0d-283ef44d835f:1750614720230:0:F:INSERT INTO Transactions (TransactionID, AccountID, TransactionDate, Amount, TransactionType)\nVALUES (1, 1, SYSDATE, 200, 'Deposit');
+2d4b85bf-24a8-4517-8c67-c6782d30e3ed:1750614720486:0:F:INSERT INTO Transactions (TransactionID, AccountID, TransactionDate, Amount, TransactionType)\nVALUES (2, 2, SYSDATE, 300, 'Withdrawal');
+cb559d24-ae61-4215-b005-2360c9178583:1750614720719:0:F:INSERT INTO Loans (LoanID, CustomerID, LoanAmount, InterestRate, StartDate, EndDate)\nVALUES (1, 1, 5000, 5, SYSDATE, ADD_MONTHS(SYSDATE, 60));
+e18c57b2-7527-46ea-b2b8-c52c0d9dd2fc:1750614720964:0:F:INSERT INTO Employees (EmployeeID, Name, Position, Salary, Department, HireDate)\nVALUES (1, 'Alice Johnson', 'Manager', 70000, 'HR', TO_DATE('2015-06-15', 'YYYY-MM-DD'));
+bab0f52e-e6d7-44c2-b250-fbbaf6210e46:1750614721149:0:F:INSERT INTO Employees (EmployeeID, Name, Position, Salary, Department, HireDate)\nVALUES (2, 'Bob Brown', 'Developer', 60000, 'IT', TO_DATE('2017-03-20', 'YYYY-MM-DD'));
