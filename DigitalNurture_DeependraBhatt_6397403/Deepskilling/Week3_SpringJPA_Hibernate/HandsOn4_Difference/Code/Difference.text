@@ -1,0 +1,8 @@
+ Feature            | JPA                             | Hibernate                           | Spring Data JPA                        
+                    |                                 |                                     |                                        
+ Type               | Specification (API)             | Implementation (Framework)          | Abstraction Layer                      
+ Purpose            | Define standard for ORM in Java | Implements JPA + provides ORM tools | Simplifies JPA + adds repositories     
+ Boilerplate Code   | Needs boilerplate               | Needs less, but still some          | Eliminates most boilerplate            
+ Ownership          | Java EE / Jakarta               | Red Hat (JBoss)                     | Spring Framework                       
+ Dependency         | Interface only                  | Implements JPA                      | Uses Hibernate (by default) underneath 
+ Learning Curve     | Medium                          | Medium                              | Easy (declarative)                     
