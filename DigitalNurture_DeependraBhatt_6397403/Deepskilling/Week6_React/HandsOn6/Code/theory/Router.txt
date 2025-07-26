@@ -1,0 +1,36 @@
+React Router: A standard library for routing in React appplications, that enables navigation among views from various components in react application.
+                Keeping th UI in sync with the URL.
+
+Need of React Router: React is a Single Page Application(SPA), that loads a single HTML page and dynamically updates its content, as user interacts with the application.
+                    React Router manages the different views and keeping the URL in sync with the displayed content.
+                    It provides a declarative way to define routes and handle navigation within the SPA.
+
+Benefits of React Router:
+1. It makes the routing logic easy to understand and maintain, by defining rouites declaratively using JSX.
+2. It keeps the browser URL in sync with the current view of the application.
+3. It supports nested routing.
+4. Routing logic is integrated with components, providing a modular codebase.
+
+Components in React Router:
+
+1. <Routes>: It is the parent component that groups individual <Route> components.
+2. <Route>: This defines a specific route, taking path, element props.
+3. <Link>: This is used to create navigation liks.
+
+
+Type of Router Components:
+
+<BrowserRouter>: It uses HTML5 history API, resulting in clean URLs.
+                Example: www.example.com/about
+
+<HashRouter>: It uses the hash portion of the URL.
+            Example: www.example.com/#/about
+
+<MemoryRouter>: It keeps the URL history in memory, not in browser address bar.(mailnly used for testing)
+
+
+Parameter passing via URL:
+
+We define URL parameters in the <Route> path by prefixing the parameter name with colon(:)
+Example:
+        <Route path="/users/:userId" element={<UserProfile />} />

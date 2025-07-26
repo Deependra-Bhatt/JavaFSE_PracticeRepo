@@ -1,0 +1,27 @@
+Q-> What is SPA and what are its benefits?
+    SPA(Single Page Application) is a web application that dynamically updates a single HTML page as the user interacts with the app.
+
+    In simple terms, we don't need to reload an entire new HTML page, the SPA swaps out the content of the current page and replaces it.
+
+Benefits of SPA:
+
+1. It is not required to full page reload, hence faster user experience
+2. Better performance, since it loads mostly what needed at once 
+3. SPA simplifies backend API interaction, as it does not need to reload the entire hence focuses on only what is needed
+4. Better caching 
+5. Simplified deployment
+
+Cons:
+1. Poor SEO support
+2. Higher initial load time
+3. SPA needs complex client-side routing
+
+Difference between SPA(Single Page Application) and MPA(Multi-Page Application)
+
+ Feature       SPA                        MPA                             
+
+ Page Loading  Single initial load        Loads new page on each click    
+ Speed         Faster navigation          Slower due to full reloads      
+ Backend       Uses REST APIs or GraphQL  Traditional full-page rendering 
+ Development   Frontend-focused           Backend-heavy                   
+ Examples      Gmail, Facebook            Amazon, LinkedIn                

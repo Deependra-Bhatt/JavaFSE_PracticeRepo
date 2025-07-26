@@ -1,0 +1,23 @@
+React: 
+        React is an open-source JavaScript library developed by Facebook for developing UI(user interfaces),
+        particularly Single Page Applications where data changes over time.
+        It encourages a declarative programming style, and effcient DOM manipulation using virtual DOM.
+
+Virtual DOM:
+        A Virtual DOM is a lightweight in-memory copy of the actual DOM, acting as a practice copy before making changes to the actual DOM.
+        React compares the virtual DOM with the real DOM and then updates only the necessary parts (called reconciliation).
+        Thus, it improves performance and user experience.
+
+Working:
+        React works by creating a Virtual DOM (Document Object Model) which is a practice copy, i.e a lightweight copy of the actual DOM. 
+        When the state of a component changes, React first updates the Virtual DOM (practice copy), and then efficiently calculates the differences between the new Virtual DOM and the previous one. 
+        Finally, it updates only the necessary parts of the actual DOM, and improving performance. 
+        This whole process is called reconciliation.
+
+Features of React:
+    
+1. JSX(JavaScript & XML): It enables yo to write HTML code directly in javascript.
+2. Virtual DOM: React creates a practice a copy known as virtual DOM where all the changes are done before doing in actual DOM.
+3. One-Way Data Binding: Data in react flows from parent component to child component.ensuring data flowing is one-directional.
+4. Fast Rendering: With the use of Virtual DOM,the rendering process becomes smooth.React updates only what's needed rather than loading the entire page.
+5. Component-based architecture: React uses small, independent, and reusable blocks known as components.

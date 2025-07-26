@@ -1,0 +1,30 @@
+Props: Props means "properties".
+        In react, props are used to pass data from a parent component to child component (uni-directional manner).
+        They are like function arguments, you pass data into a component to provide it with the neede information to render.
+        They are read only.
+
+Default Props: As the name suggest, these props are used to set a default value for a component,
+                if they are not explicitly passed by parent component.
+
+
+ReactDOM.render(): It is a method provide by react-dom package, responsible for rendering an element(or component)
+                    into the actual DOM of web page.
+                    Syntax:
+                            ReactDOM.render(element,container,[callback]);
+
+
+Difference between State and Props:
+
+Feature	            State	                                            Props
+
+Managed By	        Internal to the component.  	                    Parent component.
+Mutabililty	        Mutable 	                                        Immutable (read-only).
+Purpose	            Manages data that changes within the component	    Passes data and configurations from parent to child.
+Origin	            Defined and managed inside the component.	        Passed from the parent component as attributes.
+Flow	            Can be passed down as props to child components	    Flow down from parent to child only.
+
+
+Simply,
+        Props are like the arguments passed to the function.
+        whereas,
+        State is like a local variable within a function.

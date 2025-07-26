@@ -1,0 +1,57 @@
+React Components: 
+    Components are the building blocks of the React application.
+    Each Component represents a reusable UI piece, they accept inputs and return React elements.
+
+Types of Components in React:
+
+1. Class Components:
+                    Can use state and lifecycle methods, uses classes.
+                    It is defined using an ES6 class and must extend Component.
+                    It must have a render() method that returns JSX.
+                    Example: 
+                        class Welcome extends Component {
+                            render() {
+                                return <h1>I am a Class Component</h1>;
+                            }
+                        }
+
+2. Function Components:
+                    It is a plain JavaScript function, it takes props and returns JSX.
+                    With React Hooks, function component can manage state and lifecycle too.
+                    Example: 
+                        function Welcome() {
+                            return <h1>I am a Function Component</h1>;
+                        }
+
+
+--> render(): 
+            The render() method is mandatory in class components.
+            It returns the JSX which gets rendered in the DOM.
+            Example: 
+                render() {
+                    return <h1>My name is Deependra.</h1>;
+                }
+
+--> Component Construtor:
+            In class component, the construtor() method is used to:
+            i. initailize state
+            ii. bind event handlers
+
+            Example:
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        name: 'React'
+                    };
+                }
+
+
+Difference between React Component and JavaScript
+
+ Feature                  React Component                 JavaScript Function                    
+
+ Return Type              JSX (React elements)            Any data type (number, string, etc.)   
+ React Lifecycle Support  Yes (for class components)      No                                     
+ Reusability in UI        Yes                             Not designed for UI                    
+ Props Handling           Automatically receives `props`  Requires explicit parameter definition 
+ Rendering in DOM         Yes (with JSX)                  No direct rendering                    

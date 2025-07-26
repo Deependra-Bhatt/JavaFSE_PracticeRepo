@@ -1,0 +1,5 @@
+                        REACT STATE
+
+React State is simply a plain JavaScript object that holds information about a component. 
+When this information changes, React automatically re-renders the component to reflect those changes on the screen. 
+It's like a component's "memory" that, when updated, causes the user interface to refresh.
