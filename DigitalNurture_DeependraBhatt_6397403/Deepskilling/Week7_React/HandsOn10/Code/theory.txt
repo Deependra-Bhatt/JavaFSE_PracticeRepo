@@ -1,0 +1,54 @@
+--> JSX(JavaScript and XML): JSX allows developers to write HTML -like code directly within the Javascript.
+                        Thus, making easy to describe the UI components in React.
+
+--> ECMA Scripts: It is the standardization of JavaScript.
+                It defines the syntax, semantic and libraries of JS.
+
+--> React.createElement(): This is a function used by React to create React elements.
+                        It takes atleast 3 arguments: 
+                            1. the type of element(i.e h1, div, span)
+                            2. attributes
+                            3. a variable number of child elements
+                        
+                        Example:
+                            JSX: <h1 className="greeting"> Cognizant</h1>
+                            // transpiled into :
+                            React.createElement('h1',{className:'greeting'}, 'Cognizant');
+
+--> How to create React node with JSX?
+
+We can create React node with JSX by writing HTML tags directly within the JS code.
+Example:   
+    const myDiv=(
+        <div>
+        <p>I am a paragaraph</p>
+    );
+                            
+--> How to render JSX to DOM?
+
+For this we use, ReactDOM.render() or 
+        ReactDOM.createRoot().render().
+Example:
+    const root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<h1> Hello from JSX</h1> );
+
+--> How to use JavaScript expressions in JSX?
+
+A JavaScript expression within JSX by enclosing it in curly braces{}.
+This allows to dynamically render data, or call functions within JSX.
+Example:
+    const name="Deependra";
+    const greeting=(
+        <p> Hello,{name}</p>
+    );
+
+--> How to use inline CSS in JSX?
+
+To apply inline CSS in JSX, we use a JavaScript object where keys are camelCased property name, and values are string.
+The entire style object is enclosed in curl braces {}.
+Example: 
+const element=(
+    <span style={{color:'red', fontSize:'20px' }}>
+        This is inline CSS.
+    </span>
+);

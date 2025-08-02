@@ -1,0 +1,38 @@
+--> React Events 
+
+Events describe how the UI interacts with user actions like clicks, keyPress, etc.
+These are similar to DOM events, but more efficient performance.
+
+
+--> Event Handlers
+
+These are functions that are executed when a specific event happens.
+These are attached as attributes to the JSX element, using a special naming convention.
+Example:
+function myButton(){
+    function handleClick(){
+        alert('Button Clicked');
+    }
+    return (
+        <button onClick={handleClick}>
+            Click more
+        </button>
+    );
+}
+
+-- Synthetic Event 
+
+A Synthetic Event is React's cross-browser wrapper around the browser's native event. 
+React normalizes these events so that they have the same properties across different browsers, 
+meaning you don't have to worry about browser inconsistencies when handling events. 
+When an event occurs, React creates a Synthetic Event object and passes it to your event handler.
+
+--> React Event Naming convention
+1. CamelCase: Event names are written in camelCase like onClick, OnMouseOver,etc.
+2. on Prefix: Event names start with prefix on followed bu event type.
+
+Some Examples:
+
+onClick: for a mouse clicks
+onSubmit: for form submissons
+onKeyDown: for a key press down 

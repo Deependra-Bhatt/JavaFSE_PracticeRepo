@@ -1,0 +1,33 @@
+-->Need for Unit Testing
+Unit testing is needed to test whther all the React components are working smoothly and as expected.
+It helps to find errors and bugs early and fixing them
+It makes the application more reliable, robust and easier to maintain
+
+
+--> Working with Jest and Enzyme
+1. Jest: It is  Unit Testing framework.
+        It also helps you to mock the behaviour of dependencies needed.
+        It provides with test() and expect() functions, for writing assertions.
+
+2. Enzyme: Enzyme is the framework that helps developers and testers to interact with the React Components during testing
+            It also provide with utility fucntions to render the React Components in a test environment.
+
+Working Together: Jest is the general testing framework that provides the environment, assertions, and mocking. 
+                    Enzyme provides specific tools that make it easy to render and interact with React components within that Jest environment. 
+                    We use Jest to define the tests and assertions, and Enzyme to render and manipulate the React components for those tests.
+
+
+        
+ --> Types of Router Components
+
+1. BrowserRouter:
+    Uses HTML5 history API, and creates clean URL's
+    Requires server-side configuration to handle direct URL access
+
+2. HashRouter:
+    Uses hash portion of URL to keep UI in sync
+    Does not require server-side configuration as everything after the hash is ignored by the server
+
+
+<Route>: Defines a path and component to render.
+<Link>: Used for navigation between different routes 

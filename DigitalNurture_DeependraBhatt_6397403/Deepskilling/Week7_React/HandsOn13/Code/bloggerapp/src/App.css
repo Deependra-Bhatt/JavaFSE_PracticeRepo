@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.column {
+  border-left: 3px solid green;
+  padding-left: 10px;
+  width: 33.3%;
+}

@@ -1,0 +1,123 @@
+--> Various ways of conditional rendering
+
+1. if Statement: Example: 
+                        function Greeting(props) {
+                            if (props.isLoggedIn) {
+                                return <h1>Welcome back!</h1>;
+                            }
+                            return <h1>Please sign in.</h1>;
+                        }
+
+2. Ternary Operator:  Example:
+                                function StatusMessage(props) {
+                                    return (
+                                        <div>
+                                            {props.isOnline ? <p>You are online.</p> : <p>You are offline.</p>}
+                                        </div>
+                                    );
+                                }
+
+3. Element Variable: Example:
+                            function LoginControl(props) {
+                                let button;
+                                if (props.isLoggedIn) {
+                                    button = <button>Logout</button>;
+                                } else {
+                                    button = <button>Login</button>;
+                                }
+                                return <div>{button}</div>;
+                            }
+
+4. Logical && Operator(short-circuit evaluation): 
+              Example:
+                    function WarningBanner(props) {
+                      return (
+                        <div>
+                          {props.showWarning && <p>This is a warning!</p>}
+                        </div>
+                      );
+                    }
+
+
+--> How to render Multiple Components?
+
+To render multiple components, we place them side by side within a parent element.
+Example:
+    function App() {
+        return (
+            <div>
+                <Header />
+                <MainContent />
+                <Footer />
+            </div>
+        );
+    }
+
+
+--> List Component
+
+It is a component designed to render a collection of items,
+by iterating over an array of data.
+It often uses map() fuction to transform array of data into an array of React elements.
+Example:
+function NumberList(props) {
+  const numbers = props.numbers; 
+  const listItems = numbers.map((number) =>
+    <li key={number.toString()}>{number}</li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+
+--> Keys in React
+
+Keys are special string attributes that must be included while creating lists of elements in React.
+It helps React to identify which item in a list have changes, added or removed.
+Some properites are:
+1. Each key must be unique among its siblings.
+2. Keys should be predictable.(recommended to use UniqueID from the data)
+
+
+--> How to extract components with keys?
+
+Lets, understand with the help of example:
+Example:
+function ListItem(props) {
+  return <li>{props.value}</li>;
+}
+
+function NumberListWithComponent(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    // The key is placed on the element directly returned by map()
+    <ListItem key={number.toString()} value={number} />
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+--> React Map, map()
+
+It is a JS array method used in React.
+It creates a new array by calling a provided function on every element in original array.
+
+Example:
+const fruits = ['Apple', 'Banana', 'Cherry'];
+
+// Using map() to create an array of <li> elements
+const fruitListItems = fruits.map((fruit, index) =>
+  <li key={index}>{fruit}</li> // Using index as key
+);
+
+function FruitDisplay() {
+  return (
+    <ul>
+      {fruitListItems}
+    </ul>
+  );
+}
+
+

@@ -1,0 +1,42 @@
+--> Need and Benefits of React Context API
+
+Imagine that many components need to access the data.
+Without context, we have to pass this data doen through every level of component tree, 
+even to component that directly don't use it.
+
+Benefits:
+1. Make code cleaner and easy to read.
+2. It provides a way to share data that can be considered global for React tree components.
+3. It eliminates the need to pass props manually through many level of components.
+
+
+--> Working of createContext()
+
+createContext() is a function used to create a context object.
+When called, it returns an object with 2 components:
+1. Provider
+2. Consumer
+
+Syntax: 
+        const MyContext = React.createContext(defaultValue);
+
+Working:
+1. We call the createContext() to get the context object.
+2. We then provide the parts of the components tree that needs access to context with, MyContext.Provider
+    <MyContext.Provider value={data}> {Child components} </MyContext.Provider>
+3.Components within the Provider's tree can access the provided value using 'useContext' Hook.
+
+
+--> Types of Router Components
+
+1. BrowserRouter:
+    Uses HTML5 history API, and creates clean URL's
+    Requires server-side configuration to handle direct URL access
+
+2. HashRouter:
+    Uses hash portion of URL to keep UI in sync
+    Does not require server-side configuration as everything after the hash is ignored by the server
+
+
+<Route>: Defines a path and component to render.
+<Link>: Used for navigation between different routes 

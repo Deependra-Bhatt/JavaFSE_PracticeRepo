@@ -1,0 +1,64 @@
+--> Conditional Rendering
+
+In React, Conditional Rendering means to display different components or elements based on certain conditions.
+This allows the UI to be dynamic and respond to changes in data or state.
+We can use standard Javascript Conditional operators to achieve this.
+Example:
+    function greetMale(){
+        return <h1> Hello Sir! </h1>;
+    }
+    function greetFemale(){
+        return <h2> Hello Ma'am! </h2>;
+    }
+
+    function call(){
+        const gender="Male";
+        if (gender==="Male"){
+            return <greetMale/>;
+        }else{
+            return <greetFemale/>;
+        }
+    }
+
+
+--> Element Variable
+
+Element variables are simply regular Javascript variables that hold React elements(JSX).
+You can store an element in a variable and then conditionally render that variable, or pass it around in your application.
+Example:
+
+let button;
+const isLoggedIn = true; // Imagine this comes from state or props
+
+if (isLoggedIn) {
+  button = <button>Logout</button>;
+} else {
+  button = <button>Login</button>;
+}
+
+return (
+  <div>
+    {button}
+  </div>
+);
+
+
+--> How to prevent components from rendering?
+
+It can be done by returning 'null' in the render method.
+when a component return null, React effectively skips rend that component and its children, leaving no trace of it in the DOM.
+Example:
+ 
+function WarningBanner(props) {
+  if (!props.warn) {
+    return null; // Prevents the component from rendering if 'warn' is false
+  }
+
+  return (
+    <div className="warning">
+      Warning!
+    </div>
+  );
+}
+
+<WarningBanner warn={false} /> // Renders nothing 

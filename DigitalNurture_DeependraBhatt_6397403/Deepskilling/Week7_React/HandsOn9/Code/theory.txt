@@ -1,0 +1,121 @@
+Featuers of ES6:
+    1. Use of arrpe function
+    2. let and const keywords
+    3. Use of Spread Operator(...)
+    4. Destructuring Assignment was used to extract values from arrays/ obkects
+    5. Map and Set data structures are present
+
+
+let keyword: Introduced in ES6 to declare variables, and overcome issues of var.
+            It Introduced block-scoping i.e once declared inside a bloack, a let variable cannot be used outside the block.
+            Example:
+            function name(){
+                let name="Deependra";
+                console.log(name); // output
+            }
+            console.log(name); // error
+
+
+Difference between var and let:
+
+var: it is function scoped/ global scoped.
+    It can be redefined within the same scope.
+
+let: It is block-scoped.
+    It cannot be declared within the same scope.
+
+const keyword: Introduced in ES6 alog with let, it is also block-scoped.
+                It is used to declare constant, i.e its value cannot be changed once assigned.
+                It should be initialized with a value.
+                Example: 
+                    const pi=3.14159; // accepted
+                    const PI; // Error;
+
+                    pi=3.14; // Error;
+
+
+ES6 Class Fundamentals:
+                        Classes provide a cleaner code and helps to create objects and handle inheritance.
+                        a class is declared with 'class' keyword.
+                        It has a constructor method to initialize objects.
+                        An instance(pbject) of a class is created with 'new' keyword.
+                        It can have differnet functions(methods);
+
+                        Example:
+                         class Student{
+                            constructor(name, id){
+                                this.name=name;
+                                this.id=id;
+                            }
+
+                            sayHello(){
+                                console.log(`Hello my name is ${this.name} and my ID is ${this.id}`);
+                            }
+
+                            const std1= new Student("Deependra", 6397403);
+                            std1.sayHello();
+                         }
+
+ES6 Class Inheritance:
+                        Inheritance means to inherit from someone.
+                        It allows one class known as child class (or sub class) to inherit methods and data from onother class known as parent class(suoer class).
+                        This is done using the keyword 'extends'.
+                        We use a keyword 'super()' to refer to the parent class.
+
+                        Example:
+                         class Animal{
+                            constructor(name){
+                                this.name=name;
+                            }
+                            sound(){
+                                console.log(`${this.name} makes a sound`);
+                            }
+                         }
+
+                         class Dog extends Animal{
+                            constructor(name,breed){
+                                super(name); // call the parents constructor
+                                this.breed=breed;
+                            }
+                            speak(){ // method overriding 
+                                console.log(`${this.name} has a breed known as ${this.breed}`);
+                            }
+                         }
+
+
+Arrow Functions: It is concise way to declare function.
+                Used for short functions without any names.
+
+                Example:
+                 // traditional method 
+                 function add(a,b){
+                    return a+b;
+                 }
+
+                 // use of arrow function
+                 const add = (a,b) => a+b;
+
+
+ES6 set() and map():
+
+1. Set : It is a collection of unique values.
+        It maintains an insertion order, but elements are not indexed.
+        Set objects are iterable.
+
+        Example:
+            const mySet= new Set();
+            mySet.add(1);
+            mySet.add("hello");
+            mySet.add(1); // not added since set stores unique value
+
+            console.log(mySet);
+
+2. Map: It is a collection of key-value pairs.
+        Like sets it is also iterable.
+        Example:
+        const myMap= new Map();
+
+        myMap.set("name": "Deependra");
+        myMap.set(1,"Ram");
+
+        console.log(myMap);

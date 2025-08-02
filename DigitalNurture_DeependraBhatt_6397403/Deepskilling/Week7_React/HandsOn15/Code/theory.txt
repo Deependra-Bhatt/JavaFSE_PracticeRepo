@@ -1,0 +1,46 @@
+-->React Forms
+
+Forms are used to enable user interaction and collect data.
+Unlike HTML forms, React uses the component based architecture, giving more control over the form data and submissions.
+
+
+--> Controlled Components
+It is a component where the form data is handled by React State.
+i.e. the element's value is always driven by the React state, and any change in input are first reflected in  the state,
+which then re-renders thr component to update the input's displayed value.
+
+An onChange event handler is attached to the form to update the state.
+
+
+--> Various Input Controls
+We use standard HTML form input controls, however React manages their state differently.
+For Example, <input type="text"> uses value attribute, whereas <input type="radio" uses checked attribute.
+
+
+--> Handling Forms
+It mainly involves the managing of state of the form input and updating it in response to user interactions.
+
+It involves:
+1. Intializing the state,using useState hook.
+2. Creating change handler, that handles onChange events.
+3. Bind input values to state using value/checked attributes.
+
+
+--> Submitting Forms
+When user submits a form, we prevent the default browser behaviour i.e the full pag reload,
+and handle the submission with JS function.
+
+1. Using onSubmit Event: we attach an onSubmit event handler to <form> element.
+Example: 
+        <form onSubmit={this.handleSubmit}>
+            {/* ... form inputs ... */}
+            <button type="submit">Submit</button>
+        </form>
+
+2. Using handleSubmit Function: We create a handleSubmit function to handle the form submission.
+                                We use event.preventDefault() to prevent the default browser behaviour.
+                                Example: 
+                                    handleSubmit = (event) => {
+                                        event.preventDefault(); // Prevent default form submission
+                                        console.log('Form submitted with data:', this.state);
+                                    }

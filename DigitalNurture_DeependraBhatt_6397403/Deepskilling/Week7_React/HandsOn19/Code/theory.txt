@@ -1,0 +1,49 @@
+--> Need for Isolation
+Isolation means testing one specific function or component.
+It helps to identify issues and bugs faster and prevent externa; factors from interfering
+
+
+-->Concept of Mocking
+Mocking means creating dummy dependencies with which the code under test ineteacts,
+thus providing islolation to the test event though it has many dependencies.
+It makes the test faster, predicatable, and test the error conditions, without causing real errors.
+
+
+--> Jest for Unit Testing and Mocking
+Jest is JS testing framework.
+1. Unit Testing :
+             We write small code to test a fuction or component and Jest runs these test and tells if they pass or fail.
+    Example: 
+        function add(a, b) {
+            return a + b;
+        }
+
+        test('adds 1 + 2 to equal 3', () => {
+            expect(add(1, 2)).toBe(3);
+        });
+
+2. Mocking : 
+            Jest has built-in features to create mock functions and modules.
+            We can replace real fuction with jest.fn() to control its behaviour and track its calls.
+    Example: 
+        async function fetchData() {
+            const response = await fetch('https://api.example.com/data');
+            return response.json();
+        }
+
+        import { fetchData } from './myApi';
+        async function displayData() {
+            const data = await fetchData();
+            // ... Code to  display data
+        }
+
+        import { displayData } from './myComponent';
+        import * as myApi from './myApi'; // Import the module to mock
+
+        test('displayData fetches and displays data', async () => {
+            // Mock the fetchData function
+            myApi.fetchData = jest.fn().mockResolvedValue({ message: 'Mocked Data' });
+
+            await displayData();
+        });
+        
