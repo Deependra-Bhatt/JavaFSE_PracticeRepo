@@ -1,0 +1,5 @@
+--> What is .gitignore?
+
+.gitignore is a special file used to tell Git which files or folders to ignore during commits.
+It prevents unnecessary or sensitive files (like logs, temp files, IDE settings, etc.) from being pushed to the repository.
+It should be placed at the root of your Git project.
